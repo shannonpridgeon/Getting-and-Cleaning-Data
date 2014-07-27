@@ -1,0 +1,58 @@
+Code Book for Coursera's Getting and Cleaning Data Project
+by Shannon Pridgeon, 7/24/14
+
+Most column headers were built from fragments of familiar terms.
+"time" and "frequency" fit the first "term". Some measurements are times, some are frequencies.
+"body" and "gravity" fit the second term. The devices were subject to both gravity and body movement.
+"acceleration" and "jerk" fit the third term.  
+"std" and "mean" generally round out the fourth term, with some variations (especially x,y,or z directions).
+"subject" is the unique identifier of the person wearing the device
+"activity" indicates what the subject was doing when the measurement was recorded. Codes are below.
+
+The data were manipulated minimally. Test and training data were joined together with an extra column for training or testing. Column names were tidied up, and columns not having to do with means or standard deviations were discarded. Mean frequency columns were not included.
+
+Finally, the data were aggregated.  180 person/activity combinations are possible. My final tidy data set gives the means of all 180 combinations.
+
+Activites:
+1 WALKING
+2 WALKING_UPSTAIRS
+3 WALKING_DOWNSTAIRS
+4 SITTING
+5 STANDING
+6 LAYING
+
+Column headers:
+[1] "subject"                     "activity"                   
+ [3] "timebodyaccstdx"             "timebodyaccstdy"            
+ [5] "timebodyaccstdz"             "timegravityaccstdx"         
+ [7] "timegravityaccstdy"          "timegravityaccstdz"         
+ [9] "timebodyaccjerkstdx"         "timebodyaccjerkstdy"        
+[11] "timebodyaccjerkstdz"         "timebodygyrostdx"           
+[13] "timebodygyrostdy"            "timebodygyrostdz"           
+[15] "timebodygyrojerkstdx"        "timebodygyrojerkstdy"       
+[17] "timebodygyrojerkstdz"        "timebodyaccmagstd"          
+[19] "timegravityaccmagstd"        "timebodyaccjerkmagstd"      
+[21] "timebodygyromagstd"          "timebodygyrojerkmagstd"     
+[23] "freqbodyaccstdx"             "freqbodyaccstdy"            
+[25] "freqbodyaccstdz"             "freqbodyaccjerkstdx"        
+[27] "freqbodyaccjerkstdy"         "freqbodyaccjerkstdz"        
+[29] "freqbodygyrostdx"            "freqbodygyrostdy"           
+[31] "freqbodygyrostdz"            "freqbodyaccmagstd"          
+[33] "freqbodybodyaccjerkmagstd"   "freqbodybodygyromagstd"     
+[35] "freqbodybodygyrojerkmagstd"  "timebodyaccmeanx"           
+[37] "timebodyaccmeany"            "timebodyaccmeanz"           
+[39] "timegravityaccmeanx"         "timegravityaccmeany"        
+[41] "timegravityaccmeanz"         "timebodyaccjerkmeanx"       
+[43] "timebodyaccjerkmeany"        "timebodyaccjerkmeanz"       
+[45] "timebodygyromeanx"           "timebodygyromeany"          
+[47] "timebodygyromeanz"           "timebodygyrojerkmeanx"      
+[49] "timebodygyrojerkmeany"       "timebodygyrojerkmeanz"      
+[51] "timebodyaccmagmean"          "timegravityaccmagmean"      
+[53] "timebodyaccjerkmagmean"      "timebodygyromagmean"        
+[55] "timebodygyrojerkmagmean"     "freqbodyaccmeanx"           
+[57] "freqbodyaccmeany"            "freqbodyaccmeanz"           
+[59] "freqbodyaccjerkmeanx"        "freqbodyaccjerkmeany"       
+[61] "freqbodyaccjerkmeanz"        "freqbodygyromeanx"          
+[63] "freqbodygyromeany"           "freqbodygyromeanz"          
+[65] "freqbodyaccmagmean"          "freqbodybodyaccjerkmagmean" 
+[67] "freqbodybodygyromagmean"     "freqbodybodygyrojerkmagmean"
